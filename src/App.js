@@ -1,25 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import { SearchTerm } from './features/searchTerm/searchTerm';
+import { FavoriteRecipes } from './features/favoriteRecipes/FavoriteRecipes';
+import { AllRecipes } from './features/allRecipes/AllRecipes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <section>
+        <SearchTerm />
+      </section>
+      <section>
+        <h2>Favorite Recipes</h2>
+        <FavoriteRecipes />
+      </section>
+        <hr/>
+      <section>
+        <h2>All Recipes</h2>
+        <AllRecipes />
+      </section>
+    </main>
+    );
 }
 
 export default App;
